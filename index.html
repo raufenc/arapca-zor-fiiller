@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Arapça Pre A1 ailesi: görselleştirmesi zor 18 fiil için dört usulde küçük baskı resimleri, karşıtlık çiftleri ve yönerge simgeleri.">
+<title>Zor Fiiller Kataloğu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Noto+Naskh+Arabic:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+/* Düzen: kitap sayfası gibi tek sütun; her fiil bir "künye + aday resimler" şeridi. Renkler Pre A1 kitabının çini paletinden. */
+:root{
+  --kagit:#FBFAF7; --yuzey:#FFFFFF; --murekkep:#1C2A2C; --soluk:#5B6B6C;
+  --petrol:#1F5F66; --mercan:#C2462F; --kum:#EFE5D2; --cizgi:#DCD5C7;
+  --f-bas:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --f-govde:"Source Sans 3",ui-sans-serif,system-ui,sans-serif;
+  --f-ar:"Noto Naskh Arabic","Geeza Pro","Arial",serif;
+  --boy:200px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --kagit:#111A1B; --yuzey:#182425; --murekkep:#E7EDEB; --soluk:#9DB0AF;
+  --petrol:#7CC0C4; --mercan:#F0866E; --kum:#25332F; --cizgi:#2F3F40; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --kagit:#111A1B; --yuzey:#182425; --murekkep:#E7EDEB; --soluk:#9DB0AF;
+  --petrol:#7CC0C4; --mercan:#F0866E; --kum:#25332F; --cizgi:#2F3F40; color-scheme:dark}
+*{box-sizing:border-box}img{max-width:100%}[hidden]{display:none!important}
+body{background:var(--kagit);color:var(--murekkep);font:17px/1.55 var(--f-govde);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.sayfa{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--f-bas);text-wrap:balance;margin:0;line-height:1.1}
+a{color:var(--petrol)}
+[lang=ar]{font-family:var(--f-ar);font-weight:700}
+
+.bas{padding-block:48px 28px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:center;border-bottom:2px solid var(--murekkep)}
+.ust{font:600 13px/1 var(--f-govde);letter-spacing:.12em;text-transform:uppercase;color:var(--mercan);margin:0 0 14px}
+h1{font-size:clamp(38px,6vw,68px);font-weight:800;letter-spacing:-.02em}
+h1 span{color:var(--petrol)}
+.indir{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}.indir a{font:600 14px/1 var(--f-govde);padding:9px 13px;border-radius:999px;border:1px solid var(--petrol);color:var(--petrol);text-decoration:none}.indir a:first-child{background:var(--petrol);color:var(--kagit)}
+.bas p.giris{max-width:58ch;margin:18px 0 0;color:var(--soluk)}
+.sorun{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sorun figure{margin:0;background:var(--yuzey);border:1px solid var(--cizgi);border-radius:6px;overflow:hidden}
+.sorun img{display:block;aspect-ratio:1;object-fit:cover;width:100%}
+.sorun figcaption{padding:8px 10px;font-size:14px;display:flex;justify-content:space-between;gap:6px}
+.sorun .not{grid-column:1/-1;font-size:14px;color:var(--soluk);margin:0}
+
+section{padding-block:44px 8px}
+h2{font-size:clamp(26px,3.4vw,36px);font-weight:800;margin-bottom:6px}
+.alt{color:var(--soluk);max-width:64ch;margin:0 0 24px}
+
+.bulgular{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--cizgi)}
+.bulgu{padding:18px 20px 20px 0;border-bottom:1px solid var(--cizgi)}
+.bulgu:not(:nth-child(3n)){border-right:1px solid var(--cizgi)}
+.bulgu:not(:nth-child(3n+1)){padding-left:20px}
+.bulgu h3{font-size:19px;margin-bottom:6px}
+.bulgu p{margin:0 0 8px;font-size:15.5px}
+.bulgu .kim{font-size:13.5px;color:var(--soluk)}
+
+.arac{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--kagit);border-block:1px solid var(--cizgi);
+  display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;padding-block:10px;margin-bottom:8px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--kagit)}
+.grup{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.grup>span{font-size:13px;color:var(--soluk);margin-right:4px}
+.arac button{font:600 14px/1 var(--f-govde);padding:8px 11px;border-radius:999px;border:1px solid var(--cizgi);background:var(--yuzey);color:var(--murekkep);cursor:pointer}
+.arac button[aria-pressed=true]{background:var(--petrol);border-color:var(--petrol);color:var(--kagit)}
+.arac button:focus-visible{outline:2px solid var(--mercan);outline-offset:2px}
+.mm-not{font-size:13px;color:var(--soluk)}
+
+.fiil{display:grid;grid-template-columns:230px minmax(0,1fr);gap:24px;padding-block:22px;border-bottom:1px solid var(--cizgi)}
+.etiket .ar{font-size:34px;line-height:1.5;margin:0;color:var(--petrol)}
+.etiket .dis{font-size:22px;color:var(--soluk);font-weight:500}
+.etiket h3{font-size:22px;margin:2px 0 6px}
+.meta{margin:0 0 8px;font-size:13.5px;color:var(--soluk)}
+.z{display:inline-block;font-weight:600;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:2px 7px;border-radius:3px;background:var(--kum);color:var(--murekkep);margin-right:4px}
+.neden{margin:0;font-size:15px}
+.adaylar{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-start;min-width:0}
+.aday{margin:0;width:var(--boy);max-width:100%}
+.kap{background:#fff;border:1px solid var(--cizgi);border-radius:4px;overflow:hidden}
+.aday img,.ys img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.aday figcaption{font-size:13px;color:var(--soluk);padding-top:6px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.aday figcaption b{color:var(--murekkep)}
+.aday.sec .kap{border:2px solid var(--mercan)}
+.rozet{font-weight:600;color:var(--mercan)}
+body.mm .aday,body.mm .ys{width:var(--boy)}
+body.mm .aday figcaption{font-size:11px}
+body.mm .kap{border-width:1px}
+
+.ciftler{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.cift{margin:0}
+.cift img{display:block;width:100%;border:1px solid var(--cizgi);border-radius:4px;background:#fff}
+.cift figcaption{padding-top:8px;font-size:15px}
+.cift figcaption span{font-size:20px;color:var(--petrol)}
+.cift i{color:var(--soluk);font-style:normal;margin-inline:2px 10px}
+
+.yonerge{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}
+body.mm .yonerge{display:flex;flex-wrap:wrap}
+.ys{margin:0}
+.ys figcaption{display:flex;flex-direction:column;align-items:center;padding-top:6px;text-align:center}
+.ys figcaption span{font-size:20px;color:var(--petrol);line-height:1.4}
+.ys figcaption i{font-style:normal;font-size:13px;color:var(--soluk)}
+
+.baski{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.tablo{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--cizgi);vertical-align:top}
+th{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--soluk)}
+.liste{margin:0;padding-left:20px}
+.liste li{margin-bottom:8px}
+.kaynak{font-size:14px;color:var(--soluk);columns:2;column-gap:28px;padding-left:18px}
+.kaynak li{margin-bottom:6px;break-inside:avoid}
+
+@media (max-width:860px){
+  .bas{grid-template-columns:1fr}
+  .bulgular{grid-template-columns:1fr}
+  .bulgu{border-right:0!important;padding-left:0!important}
+  .fiil{grid-template-columns:1fr;gap:12px}
+  .ciftler,.baski{grid-template-columns:1fr}
+  .kaynak{columns:1}
+  :root{--boy:calc(50% - 7px)}
+}
+@media print{
+  @page{size:A4;margin:12mm}
+  :root{--kagit:#fff;--yuzey:#fff;--murekkep:#1C2A2C;--soluk:#5B6B6C;--petrol:#1F5F66;--mercan:#C2462F;--kum:#EFE5D2;--cizgi:#DCD5C7;--boy:30mm;color-scheme:light}
+  body{font-size:9.5pt;padding:0}
+  .arac,.indir,.ekran,body::before{display:none!important}
+  .bas{padding-block:0 6mm;gap:8mm;grid-template-columns:1.3fr 1fr}
+  h1{font-size:28pt} h2{font-size:16pt}
+  section{padding-block:7mm 0}
+  #katalog,#ciftler,#yonerge{break-before:page}
+  .bulgular{grid-template-columns:repeat(3,1fr)}
+  .bulgu{padding:3mm 4mm 3mm 0}.bulgu p{font-size:9pt}
+  .fiil{grid-template-columns:48mm 1fr;gap:5mm;padding-block:3.5mm;break-inside:avoid}
+  .etiket .ar{font-size:20pt}.etiket .dis{font-size:13pt}.etiket h3{font-size:13pt}.meta{font-size:8pt}.neden{font-size:9pt}
+  .adaylar{gap:3mm;flex-wrap:nowrap}.aday{width:30mm}.aday figcaption{font-size:7pt}
+  .ciftler{grid-template-columns:1fr 1fr;gap:5mm}.cift{break-inside:avoid}
+  .yonerge{grid-template-columns:repeat(5,1fr);gap:4mm}.ys{break-inside:avoid}
+  .baski{grid-template-columns:1fr 1fr}
+  a{color:inherit;text-decoration:none}
+  .kaynak a::after{content:" — " attr(href);font-size:7pt;word-break:break-all}
+}
+@media (prefers-reduced-motion:no-preference){.aday img{transition:transform .2s}.aday:hover img{transform:scale(1.03)}}
+</style>
+
+</head>
+<body>
+<div class="sayfa">
+<header class="bas">
+  <div>
+    <p class="ust">Pre A1 ailesi · resim kataloğu</p>
+    <h1>Gel, git, konuş: <span>görünmeyen fiiller</span></h1>
+    <p class="indir"><a href="katalog.pdf">Kataloğu PDF indir</a><a href="baski-provasi.pdf">Baskı provası (A4)</a></p><p class="giris">Yön, ses ve algı fiilleri tek kişilik resimde birbirine karışıyor. Başka dillerin kitaplarının ve iletişim panolarının bu işi nasıl çözdüğüne baktık, 18 zor fiil için dört ayrı usulle küçük baskıya uygun resim ürettik, yönerge simgelerini de ekledik.</p>
+  </div>
+  <div class="sorun">
+    <figure><img src="web/mevcut_taala.jpg" alt="Mevcut gel resmi"><figcaption><span lang="ar" dir="rtl">تَعالَ</span><span>gel</span></figcaption></figure>
+    <figure><img src="web/mevcut_takallam.jpg" alt="Mevcut konuş resmi"><figcaption><span lang="ar" dir="rtl">تَكَلَّمْ</span><span>konuş</span></figcaption></figure>
+    <p class="not">Bugünkü Pre A1 resimleri: ikisi de açık avuç ve gülümseyen yüz. Küçük basılınca öğrenci hangisinin "gel" olduğunu ayırt edemez.</p>
+  </div>
+</header>
+
+<section id="arastirma">
+  <h2>Başka diller ne yapıyor?</h2>
+  <p class="alt">Altı usul öne çıktı. Hiçbiri tek başına yetmiyor, ama her fiil için en az biri işi çözüyor.</p>
+  <div class="bulgular">
+    <div class="bulgu"><h3>Konuşanı resme koy</h3><p>Gel ve git konuşana göre yön bildirir. İngilizce öğrenen Japonlar da, İspanyolca öğrenen Polonyalılar da bu fiillerde zorlanıyor; resim, konuşanın nerede durduğunu göstermezse anlam kaybolur. Bizim çözüm: kamera emri veren kişidir.</p><p class="kim">Japonca 行く/来る, Çince 去/来 dersleri; deixis çalışmaları</p></div>
+    <div class="bulgu"><h3>Hareket izi ve ok</h3><p>Çizgi roman araştırmalarında hareket çizgileri olayı daha iyi anlattırıyor. Küçük çocuklar ise çizgiyi rüzgâr sanabiliyor. Ok kalın, kısa ve bir hedefe (kapı, kişi) bağlı olmalı.</p><p class="kim">Cohn ve Maher 2014; Gross 1991</p></div>
+    <div class="bulgu"><h3>İletişim panosu simgeleri</h3><p>ARASAAC, Widgit gibi setler yüzsüz, şematik figürle fiil anlatıyor ve anlaşılırlıkları ölçülmüş. Dikkat: ARASAAC'ta sağa-sola ok zaman anlamına da geliyor. Kitapta okun tek bir anlamı olmalı.</p><p class="kim">ARASAAC saydamlık çalışmaları</p></div>
+    <div class="bulgu"><h3>Karşıtlık çifti</h3><p>Ders kitapları gel/git, aç/kapat gibi fiilleri yan yana, aynı sahnede verir. Öğrenci farkı karşılaştırarak bulur. Arapça 9 s.57 da bu usulle kurulmuş.</p><p class="kim">Arapça 9 s.57; Minna no Nihongo 5. ders</p></div>
+    <div class="bulgu"><h3>Hareketle öğret (TPR)</h3><p>Emir kipi, bedenle öğretmenin (Total Physical Response) asıl alanı. Resimdeki el işareti öğretmenin sınıfta yaptığı hareketle aynı olursa kitap ve sınıf birbirini destekler.</p><p class="kim">Asher, TPR</p></div>
+    <div class="bulgu"><h3>Yönergeyi simgeyle ver</h3><p>Okuması zayıf öğrenci için yönerge simgeleri yazının yerini tutar. Önce simge tek başına tanıtılır, sonra yazıyla eşleştirilir; simge kitap boyunca hiç değişmez.</p><p class="kim">AMEP öğretmen kaynakları</p></div>
+  </div>
+</section>
+
+<section id="katalog">
+  <h2>Katalog: 18 zor fiil</h2>
+  <p class="alt">Her fiil için A sahne, B el, C simge, varsa D çift adayı. Mercan çerçeveli olan bizim önerimiz.<span class="ekran"> Resimlere baskı boyutunda bakmak için aşağıdaki düğmeleri kullanın.</span></p>
+  <div class="arac" role="toolbar" aria-label="Görünüm">
+    <div class="grup" id="boyut"><span>Boyut</span>
+      <button type="button" data-b="200px" aria-pressed="true">Ekran</button>
+      <button type="button" data-b="30mm" aria-pressed="false">30 mm</button>
+      <button type="button" data-b="20mm" aria-pressed="false">20 mm</button>
+      <button type="button" data-b="14mm" aria-pressed="false">14 mm</button>
+    </div>
+    <div class="grup" id="suzgec"><span>Zorluk</span>
+      <button type="button" data-z="" aria-pressed="true">Hepsi</button>
+      <button type="button" data-z="yön" aria-pressed="false">Yön</button>
+      <button type="button" data-z="ses" aria-pressed="false">Ses</button>
+      <button type="button" data-z="algı" aria-pressed="false">Algı</button>
+      <button type="button" data-z="zaman" aria-pressed="false">Zaman</button>
+      <button type="button" data-z="durum" aria-pressed="false">Durum</button>
+    </div>
+    <span class="mm-not">Ekrandaki milimetre yaklaşıktır; kesin ölçü için baskı provası PDF'i.</span>
+  </div>
+  
+<article class="fiil" data-z="yön" id="f-gel">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">تَعالَ<span class="dis"> / تَعالَيْ</span></p>
+    <h3>gel</h3>
+    <p class="meta"><span class="z z-yön">yön</span> AİHL 9 s.57</p>
+    <p class="neden">Öğrenci bize doğru yürüyor: izleyici çağıran kişidir, ok gerekmez. Konuyu ilk açarken D çiftiyle birlikte verin.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_gel.jpg" alt="gel — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_gel.jpg" alt="gel — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_gel.jpg" alt="gel — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_gel.jpg" alt="gel — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-git">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِذْهَبْ<span class="dis"> / اِذْهَبي</span></p>
+    <h3>git</h3>
+    <p class="meta"><span class="z z-yön">yön</span> AİHL 9 s.57</p>
+    <p class="neden">Sırtı bize dönük, kapıya uzaklaşıyor. Tek başına bile gel&#x27;in tersi olarak okunuyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_git.jpg" alt="git — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_git.jpg" alt="git — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_git.jpg" alt="git — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_git.jpg" alt="git — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-gir">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اُدْخُلْ<span class="dis"> / اُدْخُلي</span></p>
+    <h3>gir</h3>
+    <p class="meta"><span class="z z-yön">yön</span> A1 sınıf dili</p>
+    <p class="neden">Kapının eşiğinde, yüzü bize: içeri geliyor. 20 mm altında C simgesi daha iyi.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_gir.jpg" alt="gir — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_gir.jpg" alt="gir — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_gir.jpg" alt="gir — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_gir.jpg" alt="gir — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-cik">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اُخْرُجْ<span class="dis"> / اُخْرُجي</span></p>
+    <h3>çık</h3>
+    <p class="meta"><span class="z z-yön">yön</span> A1 sınıf dili</p>
+    <p class="neden">Aynı kapı, sırtı bize, ötesi ışıklı dış: dışarı gidiyor. Gir ile yan yana basılırsa fark kesinleşir.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_cik.jpg" alt="cik — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_cik.jpg" alt="cik — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_cik.jpg" alt="cik — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_cik.jpg" alt="cik — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-don">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِرْجِعْ<span class="dis"> / اِرْجِعي</span></p>
+    <h3>geri dön</h3>
+    <p class="meta"><span class="z z-yön">yön</span> A1 sınıf dili</p>
+    <p class="neden">Figür ve U ok, en küçük boyda bile okunuyor. Sahnedeki dönüş hareketi küçülünce kayboluyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_don.jpg" alt="don — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_don.jpg" alt="don — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday sec" data-u="C"><div class="kap"><img src="web/C_don.jpg" alt="don — Simge + ok"></div><figcaption><b>C</b> Simge + ok<span class="rozet">Önerilen</span></figcaption></figure></div>
+</article>
+<article class="fiil" data-z="zaman" id="f-bekle">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِنْتَظِرْ<span class="dis"> / اِنْتَظِري</span></p>
+    <h3>bekle</h3>
+    <p class="meta"><span class="z z-zaman">zaman</span> A1 sınıf dili</p>
+    <p class="neden">Kum saati süreyi tek nesneyle anlatıyor. Sahnede duvar saati küçükte okunmuyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_bekle.jpg" alt="bekle — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_bekle.jpg" alt="bekle — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday sec" data-u="C"><div class="kap"><img src="web/C_bekle.jpg" alt="bekle — Simge + ok"></div><figcaption><b>C</b> Simge + ok<span class="rozet">Önerilen</span></figcaption></figure></div>
+</article>
+<article class="fiil" data-z="ses" id="f-konus">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">تَكَلَّمْ<span class="dis"> / تَكَلَّمي</span></p>
+    <h3>konuş</h3>
+    <p class="meta"><span class="z z-ses">ses</span> Yönerge sözlüğü · AİHL 9 s.57</p>
+    <p class="neden">Ağzı açık, boş balon ve el. Sus ile çift yapılırsa (D) en kesin hâli.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_konus.jpg" alt="konus — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_konus.jpg" alt="konus — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_konus.jpg" alt="konus — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_konus.jpg" alt="konus — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="ses" id="f-sus">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اُسْكُتْ<span class="dis"> / اُسْكُتي</span></p>
+    <h3>sus</h3>
+    <p class="meta"><span class="z z-ses">ses</span> AİHL 9 s.57</p>
+    <p class="neden">Parmak dudakta; her kültürde aynı işaret. Balon yok.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_sus.jpg" alt="sus — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_sus.jpg" alt="sus — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_sus.jpg" alt="sus — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_sus.jpg" alt="sus — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="ses" id="f-dinle">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِسْتَمِعْ<span class="dis"> / اِسْتَمِعي</span></p>
+    <h3>dinle</h3>
+    <p class="meta"><span class="z z-ses">ses</span> Yönerge sözlüğü</p>
+    <p class="neden">Kulaklık, kitaptaki dinleme simgesiyle aynı nesne: öğrenci ikisini bağlar. Yalnız el isteniyorsa B.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_dinle.jpg" alt="dinle — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_dinle.jpg" alt="dinle — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_dinle.jpg" alt="dinle — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="zaman" id="f-tekrar">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">أَعِدْ<span class="dis"> / أَعيدي</span></p>
+    <h3>tekrar et</h3>
+    <p class="meta"><span class="z z-zaman">zaman</span> Yönerge sözlüğü</p>
+    <p class="neden">İki balon ve dönen ok: aynı sözü yeniden söylemek. Sahnede balonlar küçükte birbirine karışıyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_tekrar.jpg" alt="tekrar — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_tekrar.jpg" alt="tekrar — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday sec" data-u="C"><div class="kap"><img src="web/C_tekrar.jpg" alt="tekrar — Simge + ok"></div><figcaption><b>C</b> Simge + ok<span class="rozet">Önerilen</span></figcaption></figure></div>
+</article>
+<article class="fiil" data-z="ses" id="f-sor">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِسْأَلْ<span class="dis"> / اِسْأَلي</span></p>
+    <h3>sor</h3>
+    <p class="meta"><span class="z z-ses">ses</span> A1 sınıf dili</p>
+    <p class="neden">Sınıfta söz isteyen kalkık el, herkesin tanıdığı jest. C&#x27;deki soru işareti Arapça yönüne çevrildi (؟).</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_sor.jpg" alt="sor — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_sor.jpg" alt="sor — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_sor.jpg" alt="sor — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_sor.jpg" alt="sor — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="ses" id="f-cevap">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">أَجِبْ<span class="dis"> / أَجيبي</span></p>
+    <h3>cevap ver</h3>
+    <p class="meta"><span class="z z-ses">ses</span> Yönerge sözlüğü</p>
+    <p class="neden">Tek resimde konuş&#x27;tan ayrılmıyor; ancak sor ile çiftte, balonun yönü değişince anlaşılıyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_cevap.jpg" alt="cevap — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_cevap.jpg" alt="cevap — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_cevap.jpg" alt="cevap — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday sec" data-u="D"><div class="kap"><img src="web/D_cevap.jpg" alt="cevap — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti<span class="rozet">Önerilen</span></figcaption></figure></div>
+</article>
+<article class="fiil" data-z="algı" id="f-bak">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اُنْظُرْ<span class="dis"> / اُنْظُري</span></p>
+    <h3>bak</h3>
+    <p class="meta"><span class="z z-algı">algı</span> Yönerge sözlüğü</p>
+    <p class="neden">Siper el ve bakış oku. Yalnız göz simgesi (C) yüzsüz kullanım gerekirse.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_bak.jpg" alt="bak — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_bak.jpg" alt="bak — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_bak.jpg" alt="bak — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="algı" id="f-izle">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">شاهِدْ<span class="dis"> / شاهِدي</span></p>
+    <h3>izle</h3>
+    <p class="meta"><span class="z z-algı">algı</span> Yönerge sözlüğü</p>
+    <p class="neden">Ekran karşısında oturan öğrenci. Yönerge satırında küçük kullanılacaksa yönerge simgesi.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_izle.jpg" alt="izle — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_izle.jpg" alt="izle — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_izle.jpg" alt="izle — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="durum" id="f-ac">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">اِفْتَحْ<span class="dis"> / اِفْتَحي</span></p>
+    <h3>aç</h3>
+    <p class="meta"><span class="z z-durum">durum</span> A1 sınıf dili</p>
+    <p class="neden">Kitap ve dışa açılan iki ok: eylemin kendisi. Sahnede kapağı kaldırma hâli küçükte kitap gibi değil kutu gibi okunabiliyor.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_ac.jpg" alt="ac — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday sec" data-u="B"><div class="kap"><img src="web/B_ac.jpg" alt="ac — El işareti"></div><figcaption><b>B</b> El işareti<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_ac.jpg" alt="ac — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_ac.jpg" alt="ac — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="durum" id="f-kapat">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">أَغْلِقْ<span class="dis"> / أَغْلِقي</span></p>
+    <h3>kapat</h3>
+    <p class="meta"><span class="z z-durum">durum</span> A1 sınıf dili</p>
+    <p class="neden">Aynı kitap, içe kapanan oklar; aç ile birebir ayna.</p>
+  </header>
+  <div class="adaylar"><figure class="aday" data-u="A"><div class="kap"><img src="web/A_kapat.jpg" alt="kapat — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne</figcaption></figure><figure class="aday sec" data-u="B"><div class="kap"><img src="web/B_kapat.jpg" alt="kapat — El işareti"></div><figcaption><b>B</b> El işareti<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_kapat.jpg" alt="kapat — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_kapat.jpg" alt="kapat — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-ver">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">أَعْطِ<span class="dis"> / أَعْطي</span></p>
+    <h3>ver</h3>
+    <p class="meta"><span class="z z-yön">yön</span> A1 sınıf dili</p>
+    <p class="neden">Kalem bize uzatılıyor; izleyici alan kişi olduğu için yön açık.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_ver.jpg" alt="ver — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_ver.jpg" alt="ver — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_ver.jpg" alt="ver — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_ver.jpg" alt="ver — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+<article class="fiil" data-z="yön" id="f-al">
+  <header class="etiket">
+    <p class="ar" lang="ar" dir="rtl">خُذْ<span class="dis"> / خُذي</span></p>
+    <h3>al</h3>
+    <p class="meta"><span class="z z-yön">yön</span> A1 sınıf dili</p>
+    <p class="neden">Alttan giren el kalemi tutuyor, öğrenci alıyor. Ver ile çift basılırsa (D) en kesin.</p>
+  </header>
+  <div class="adaylar"><figure class="aday sec" data-u="A"><div class="kap"><img src="web/A_al.jpg" alt="al — Bakış açılı sahne"></div><figcaption><b>A</b> Bakış açılı sahne<span class="rozet">Önerilen</span></figcaption></figure><figure class="aday" data-u="B"><div class="kap"><img src="web/B_al.jpg" alt="al — El işareti"></div><figcaption><b>B</b> El işareti</figcaption></figure><figure class="aday" data-u="C"><div class="kap"><img src="web/C_al.jpg" alt="al — Simge + ok"></div><figcaption><b>C</b> Simge + ok</figcaption></figure><figure class="aday" data-u="D"><div class="kap"><img src="web/D_al.jpg" alt="al — Karşıtlık çifti"></div><figcaption><b>D</b> Karşıtlık çifti</figcaption></figure></div>
+</article>
+</section>
+
+<section id="ciftler">
+  <h2>Karşıtlık çiftleri</h2>
+  <p class="alt">Öğretmen hep solda ve aynı pozda; yalnız öğrencinin yönü ya da eylemi değişir. Çift hâlinde, yan yana basılmak için.</p>
+  <div class="ciftler"><figure class="cift"><img src="web/D_gel-git.jpg" alt="gel / git"><figcaption><span lang="ar" dir="rtl">تَعالَ</span> <i>gel</i> · <span lang="ar" dir="rtl">اِذْهَبْ</span> <i>git</i></figcaption></figure><figure class="cift"><img src="web/D_gir-cik.jpg" alt="gir / çık"><figcaption><span lang="ar" dir="rtl">اُدْخُلْ</span> <i>gir</i> · <span lang="ar" dir="rtl">اُخْرُجْ</span> <i>çık</i></figcaption></figure><figure class="cift"><img src="web/D_konus-sus.jpg" alt="konuş / sus"><figcaption><span lang="ar" dir="rtl">تَكَلَّمْ</span> <i>konuş</i> · <span lang="ar" dir="rtl">اُسْكُتْ</span> <i>sus</i></figcaption></figure><figure class="cift"><img src="web/D_sor-cevap.jpg" alt="sor / cevap ver"><figcaption><span lang="ar" dir="rtl">اِسْأَلْ</span> <i>sor</i> · <span lang="ar" dir="rtl">أَجِبْ</span> <i>cevap ver</i></figcaption></figure><figure class="cift"><img src="web/D_ac-kapat.jpg" alt="aç / kapat"><figcaption><span lang="ar" dir="rtl">اِفْتَحْ</span> <i>aç</i> · <span lang="ar" dir="rtl">أَغْلِقْ</span> <i>kapat</i></figcaption></figure><figure class="cift"><img src="web/D_ver-al.jpg" alt="ver / al"><figcaption><span lang="ar" dir="rtl">أَعْطِ</span> <i>ver</i> · <span lang="ar" dir="rtl">خُذْ</span> <i>al</i></figcaption></figure></div>
+</section>
+
+<section id="yonerge">
+  <h2>Yönerge simgeleri</h2>
+  <p class="alt">Yönerge sözlüğünün (YK-11) fiillerine birer simge. Kitaptaki bölüm simgeleriyle aynı aileden; yönerge satırının başında 10–14 mm basılmak için.</p>
+  <div class="yonerge"><figure class="ys"><div class="kap"><img src="web/E_dinle.jpg" alt="dinle"></div><figcaption><span lang="ar" dir="rtl">اِسْتَمِعْ</span><i>dinle</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_tekrar.jpg" alt="tekrar et"></div><figcaption><span lang="ar" dir="rtl">أَعِدْ</span><i>tekrar et</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_oku.jpg" alt="oku"></div><figcaption><span lang="ar" dir="rtl">اِقْرَأْ</span><i>oku</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_yaz.jpg" alt="yaz"></div><figcaption><span lang="ar" dir="rtl">اُكْتُبْ</span><i>yaz</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_konus.jpg" alt="konuş"></div><figcaption><span lang="ar" dir="rtl">تَكَلَّمْ</span><i>konuş</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_izle.jpg" alt="izle"></div><figcaption><span lang="ar" dir="rtl">شاهِدْ</span><i>izle</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_esle.jpg" alt="eşleştir"></div><figcaption><span lang="ar" dir="rtl">صِلْ بَيْنَ</span><i>eşleştir</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_birlestir.jpg" alt="harfleri birleştir"></div><figcaption><span lang="ar" dir="rtl">اُرْبُطْ</span><i>harfleri birleştir</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_ayir.jpg" alt="harflerine ayır"></div><figcaption><span lang="ar" dir="rtl">قَسِّمْ</span><i>harflerine ayır</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_tamamla.jpg" alt="tamamla"></div><figcaption><span lang="ar" dir="rtl">أَكْمِلْ</span><i>tamamla</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_sec.jpg" alt="seç"></div><figcaption><span lang="ar" dir="rtl">اِخْتَرْ</span><i>seç</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_daire.jpg" alt="daire içine al"></div><figcaption><span lang="ar" dir="rtl">ضَعْ دائِرَةً حَوْلَ</span><i>daire içine al</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_sirala.jpg" alt="sırala"></div><figcaption><span lang="ar" dir="rtl">رَتِّبْ</span><i>sırala</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_cevap.jpg" alt="cevap ver"></div><figcaption><span lang="ar" dir="rtl">أَجِبْ</span><i>cevap ver</i></figcaption></figure><figure class="ys"><div class="kap"><img src="web/E_bak.jpg" alt="resme bak"></div><figcaption><span lang="ar" dir="rtl">اُنْظُرْ</span><i>resme bak</i></figcaption></figure></div>
+</section>
+
+<section id="baski">
+  <h2>Baskı ve kullanım</h2>
+  <div class="baski">
+    <div class="tablo">
+      <table>
+        <thead><tr><th>Usul</th><th>300 ppi'de en büyük</th><th>Önerilen en küçük</th></tr></thead>
+        <tbody>
+          <tr><td>A Sahne</td><td>~40 mm</td><td>25 mm</td></tr>
+          <tr><td>B El işareti</td><td>~26 mm</td><td>16 mm</td></tr>
+          <tr><td>C Simge + ok</td><td>~26 mm</td><td>12 mm</td></tr>
+          <tr><td>D Çift (her hücre)</td><td>~40 mm</td><td>25 mm</td></tr>
+          <tr><td>Yönerge simgesi</td><td>~26 mm</td><td>10 mm</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="liste"><li>Kitap sağdan sola okunuyor: Arapça okuyan göz için 'ileri' sola doğrudur. Yön oklarını bir hedefe (kapı, kişi) bağlayın; yalnız sağ-sol okuna anlam yüklemeyin.</li><li>Okun kitapta tek anlamı olsun: hareket yolu. Zaman, sıra ya da 'sonra' için ok kullanılmasın.</li><li>Bir fiil hangi usulle tanıtıldıysa kitap boyunca o resimle kalsın; yönerge simgeleri hiç değişmez.</li><li>Yeni yön fiillerini önce karşıtlık çiftiyle (D) tanıtın, sonraki etkinliklerde tek resim (A) yeter.</li><li>Resimler 300 ppi için tablodaki en büyük ölçüyü geçmesin; büyük kullanım gerekirse resim tek başına yeniden üretilir.</li><li>InDesign'a geçmeden önce: CMYK dönüşümü, B/C/E simgelerinde beyaz zeminin şeffafa çevrilmesi (dekupe), kâğıda prova baskı.</li></ul>
+  </div>
+</section>
+
+<section id="kaynaklar">
+  <h2>Kaynaklar</h2>
+  <ul class="kaynak">
+    <li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4376351/">Cohn ve Maher (2014), hareket çizgileri ve olayı anlama</a></li>
+    <li><a href="https://repositories.cdlib.org/content/qt96p6p0fm/qt96p6p0fm.pdf?t=reclaf">Hacımusaoğlu ve Cohn (2022), hareket çizgisi izi</a></li>
+    <li><a href="https://revistas.ucm.es/index.php/RLOG/en/article/view/58620">ARASAAC simgelerinin biçim özellikleri ve saydamlığı</a></li>
+    <li><a href="https://aulaabierta.arasaac.org/en/customization-options-advanced-arasaac">ARASAAC: oklarla zaman gösterimi</a></li>
+    <li><a href="https://www.nucba.ac.jp/themes/s_cic@cic@nucba/pdf/njlcc072/03Kusuya.pdf">Japon öğrencilerde come/go kullanımı</a></li>
+    <li><a href="https://lancaster.ac.uk/fass/projects/stylistics/topic8/indicators/10indicators3.htm">Lancaster: bakış açısı ve come/go</a></li>
+    <li><a href="https://www.mlcjapanese.co.jp/n5_01_18.html">Japonca ikimasu / kimasu / kaerimasu</a></li>
+    <li><a href="https://ameponline.homeaffairs.gov.au/pluginfile.php/266/mod_page/content/101/Learning%20strategies_VU22579_%20Teacher%20Resources_19%20June%202023_v2.pdf">AMEP: yönerge simgeleri</a></li>
+    <li><a href="https://tour.mtsu.edu/cala/documents/tpr_tprs_summary.pdf">TPR ve TPRS özeti</a></li>
+    <li><a href="https://www.turkishclass101.com/blog/?p=3267">Türk beden dilinde "gel" işareti</a></li>
+  </ul>
+</section>
+</div>
+
+<script>
+(function(){
+  const b=document.body, kok=document.documentElement;
+  document.querySelectorAll('#boyut button').forEach(x=>x.addEventListener('click',()=>{
+    document.querySelectorAll('#boyut button').forEach(y=>y.setAttribute('aria-pressed',y===x));
+    kok.style.setProperty('--boy',x.dataset.b); b.classList.toggle('mm',x.dataset.b.endsWith('mm'));
+  }));
+  document.querySelectorAll('#suzgec button').forEach(x=>x.addEventListener('click',()=>{
+    document.querySelectorAll('#suzgec button').forEach(y=>y.setAttribute('aria-pressed',y===x));
+    document.querySelectorAll('.fiil').forEach(f=>{f.hidden=!!x.dataset.z&&f.dataset.z!==x.dataset.z});
+  }));
+})();
+</script>
+
+</body>
+</html>
